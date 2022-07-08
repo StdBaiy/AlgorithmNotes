@@ -93,3 +93,21 @@
 - --committer仅显示指定提交者相关的提交。
 - --grep仅显示含指定关键字的提交
 - -S仅显示添加或移除了某个关键字的提交
+## remote
+- 该关键字用于操纵远程仓库，后面一般加上shortname
+- add，`git remote add <shortname> <url>`新增一个远程仓库
+  - 其中shortname用于指代后面的url，后面可以用其代替url以简写
+  - 默认的shortname是origin
+- show查看某一个远程仓库的更多信息
+- rename可以重命名
+- rm可以移除远程仓库
+## fetch
+- 会将数据拉取到你的本地仓库 - 它并不会自动合并或修改你当前的工作。 当准备好时你必须手动将其合并入你的工作
+- 这么做比直接pull安全
+## push
+- `git push [remote-name] [branch-name]`
+- 只有当你有所克隆服务器的写入权限，并且之前没有人推送过时，这条命令才能生效。 
+- 当你和其他人在同一时间克隆，他们先推送然后你再推送，你的推送就会被拒绝。 你必须先将他们的工作pull下来并将其merge进你的工作后才能推送。
+  - 也就是push之前必须保证你的仓库同步了远程仓库的最新信息
+## notice
+- github中新建的仓库会把主分支命名为main，git则会命名为master
