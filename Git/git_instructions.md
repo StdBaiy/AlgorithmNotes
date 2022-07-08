@@ -109,5 +109,22 @@
 - 只有当你有所克隆服务器的写入权限，并且之前没有人推送过时，这条命令才能生效。 
 - 当你和其他人在同一时间克隆，他们先推送然后你再推送，你的推送就会被拒绝。 你必须先将他们的工作pull下来并将其merge进你的工作后才能推送。
   - 也就是push之前必须保证你的仓库同步了远程仓库的最新信息
+## tag
+- 给仓库历史中的某一个提交打上标签, 比较有代表性的是人们会使用这个功能来标记发布结点（ v1.0 、 v2.0 等等）
+- Git 使用两种主要类型的标签：轻量标签（lightweight）与附注标签（annotated）
+  - 轻量标签很像一个不会改变的分支 ,它只是一个特定提交的引用
+- -a附注标签是存储在 Git 数据库中的一个完整对象。 它们是可以被校验的；其中包含打标签者的名字、电子邮件地址、日期时间；还有一个标签信息；并且可以使用 GNU Privacy Guard （GPG）签名与验证
+- -d删除指定标签（不会删除对应commit）
+## alias
+- 别名可以简化你的一些操作
+- 示例
+  ```
+  $ git config --global alias.co checkout
+  $ git config --global alias.br branch
+  $ git config --global alias.ci commit
+  $ git config --global alias.st status
+  ```
+  以上代码用co代表checkout，其余同理
+- 你可以用'xxx'代替上面的checkout，其中xxx是一串指令，这样可以保存你常用的指令串
 ## notice
 - github中新建的仓库会把主分支命名为main，git则会命名为master
