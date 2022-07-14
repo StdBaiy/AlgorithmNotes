@@ -39,3 +39,7 @@
   - 每次commit之后生成，会指向新生成的tree
 - 一次完整的提交过程
   - edit->add->自动生成并指向blob->commit->自动把暂存区的tree复制到仓库->自动在仓库生成一个commit文件并指向该tree->自动将暂存区的tree指向仓库的tree
+## HEAD
+- 它是一个指针，指向当前所在的本地分支
+- 它会随着每次commit自动前进
+ 
